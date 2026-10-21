@@ -1,0 +1,51 @@
+
+# Data nilai mahasiswa
+nilai = [78, 55, 90, 67, 60, 82, 45, 71, 88, 59]
+
+# Menampilkan seluruh nilai
+print("Data Nilai Mahasiswa")
+print(nilai)
+
+# Menampilkan banyak data
+print(f"Jumlah mahasiswa = {len(nilai)}")
+
+
+# Fungsi untuk menghitung rata-rata
+def rata_rata(data):
+    if len(data) == 0:
+        return 0
+    return sum(data) / len(data)
+
+# Menampilkan rata-rata nilai
+print(f"Rata-rata = {rata_rata(nilai):.2f}")
+
+
+# Fungsi untuk menentukan nilai lulus
+def nilai_lulus(data, batas=60):
+    lulus = []
+    for x in data:
+        if x >= batas:
+            lulus.append(x)
+    return lulus
+
+# Menampilkan daftar nilai lulus
+print(f"Nilai lulus = {nilai_lulus(nilai)}")
+
+# Menghitung jumlah mahasiswa lulus dan tidak lulus
+jumlah_lulus = len(nilai_lulus(nilai))
+jumlah_tidak_lulus = len(nilai) - jumlah_lulus
+
+# Menampilkan jumlah kelulusan
+print(f"Jumlah mahasiswa lulus = {jumlah_lulus}")
+print(f"Jumlah mahasiswa tidak lulus = {jumlah_tidak_lulus}")
+
+
+# Menghitung total, nilai minimum, dan maksimum
+total = sum(nilai)
+minimum = min(nilai)
+maksimum = max(nilai)
+
+# Menampilkan hasil perhitungan
+print(f"Total nilai = {total}")
+print(f"Nilai minimum = {minimum}")
+print(f"Nilai maksimum = {maksimum}")
